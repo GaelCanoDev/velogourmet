@@ -1,0 +1,1401 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título y Descripción Estándar -->
+  <title>VeloGourmet — De la ruta a la alta cocina</title>
+  <meta name="description" content="Pedaleá tus kilómetros y desbloqueá alta cocina. Sincronizá tu GPS o celular y accedé a video-recetas personalizadas y cupones de descuento.">
+  <meta name="author" content="GaelCanoDev">
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon (Icono de pestaña) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ff8a65'/%3E%3Cstop offset='1' stop-color='%23ff5722'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='256' height='256' rx='52' fill='%230a0e14'/%3E%3Crect x='34' y='34' width='188' height='188' rx='42' fill='url(%23g)'/%3E%3Ccircle cx='172' cy='153' r='26' fill='%23fff'/%3E%3Ccircle cx='84' cy='153' r='26' fill='%23fff'/%3E%3Cpath d='M128 154V118l-20-20 28-22 18 22h26' fill='none' stroke='%230a0e14' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- Open Graph / Facebook / WhatsApp / Instagram / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tu-proyecto.vercel.app/">
+  <meta property="og:title" content="VeloGourmet — De la ruta a la alta cocina">
+  <meta property="og:description" content="Pedaleá tus kilómetros y desbloqueá alta cocina. Sincronizá tu GPS o celular y accedé a video-recetas personalizadas y cupones de descuento.">
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ff8a65'/%3E%3Cstop offset='1' stop-color='%23ff5722'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='256' height='256' rx='52' fill='%230a0e14'/%3E%3Crect x='34' y='34' width='188' height='188' rx='42' fill='url(%23g)'/%3E%3Ccircle cx='172' cy='153' r='26' fill='%23fff'/%3E%3Ccircle cx='84' cy='153' r='26' fill='%23fff'/%3E%3Cpath d='M128 154V118l-20-20 28-22 18 22h26' fill='none' stroke='%230a0e14' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <meta property="og:image:secure_url" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ff8a65'/%3E%3Cstop offset='1' stop-color='%23ff5722'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='256' height='256' rx='52' fill='%230a0e14'/%3E%3Crect x='34' y='34' width='188' height='188' rx='42' fill='url(%23g)'/%3E%3Ccircle cx='172' cy='153' r='26' fill='%23fff'/%3E%3Ccircle cx='84' cy='153' r='26' fill='%23fff'/%3E%3Cpath d='M128 154V118l-20-20 28-22 18 22h26' fill='none' stroke='%230a0e14' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:width" content="256">
+  <meta property="og:image:height" content="256">
+  <meta property="og:image:alt" content="VeloGourmet - Ciclismo y Nutrición Gourmet">
+  <meta property="og:site_name" content="VeloGourmet">
+  <meta property="og:locale" content="es_ES">
+  <meta name="theme-color" content="#0a0e14">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://tu-proyecto.vercel.app/">
+  <meta name="twitter:title" content="VeloGourmet — De la ruta a la alta cocina">
+  <meta name="twitter:description" content="Pedaleá tus kilómetros y desbloqueá alta cocina. Sincronizá tu GPS o celular y accedé a video-recetas personalizadas y cupones de descuento.">
+  <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ff8a65'/%3E%3Cstop offset='1' stop-color='%23ff5722'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='256' height='256' rx='52' fill='%230a0e14'/%3E%3Crect x='34' y='34' width='188' height='188' rx='42' fill='url(%23g)'/%3E%3Ccircle cx='172' cy='153' r='26' fill='%23fff'/%3E%3Ccircle cx='84' cy='153' r='26' fill='%23fff'/%3E%3Cpath d='M128 154V118l-20-20 28-22 18 22h26' fill='none' stroke='%230a0e14' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-base: #0a0e14;
+      --bg-surface: #121820;
+      --bg-card: #18202c;
+      --bg-elevated: #202b3b;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.16);
+      --text-main: #f3f6fc;
+      --text-muted: #94a3b8;
+      --text-faint: #64748b;
+      --accent: #ff5722;
+      --accent-glow: rgba(255, 87, 34, 0.25);
+      --green-sport: #10b981;
+      --green-glow: rgba(16, 185, 129, 0.2);
+      --amber-chef: #f59e0b;
+      --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      color-scheme: dark;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    a, button {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button, input, textarea, select {
+      font: inherit;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* Contenedor */
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header & Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 14, 20, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      position: relative;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+      color: var(--text-main);
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .brand-icon {
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, var(--accent), #ff8a65);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px var(--accent-glow);
+      flex-shrink: 0;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-shrink: 0;
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      border: 1px solid var(--border-strong);
+      background: rgba(255, 255, 255, 0.02);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text-main);
+      border-radius: 99px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .nav-toggle.is-active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle.is-active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.is-active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent);
+      color: #ffffff;
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    .btn-cta:hover {
+      background: #f44336;
+      box-shadow: 0 6px 20px var(--accent-glow);
+      transform: translateY(-1px);
+    }
+
+    .btn-cta:focus-visible,
+    .btn-secondary:focus-visible,
+    .nav-toggle:focus-visible,
+    .chip:focus-visible,
+    .nav-links a:focus-visible {
+      outline: 2px solid rgba(255, 255, 255, 0.9);
+      outline-offset: 2px;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border: 1px solid var(--border-strong);
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 5rem 0 4rem;
+      position: relative;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255, 87, 34, 0.15) 0%, rgba(10, 14, 20, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 87, 34, 0.1);
+      border: 1px solid rgba(255, 87, 34, 0.3);
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #ff8a65;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.3rem, 5vw, 3.8rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #ffffff 40%, #94a3b8);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-title .highlight {
+      background: linear-gradient(135deg, #ff8a65, var(--accent));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 2.25rem;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Dashboard Preview Graphic */
+    .preview-card {
+      margin-top: 3.5rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 16px;
+      padding: 1.75rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .preview-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .preview-user {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .user-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #2a3441;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--accent);
+      border: 1px solid var(--border-strong);
+    }
+
+    .preview-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .stat-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-faint);
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 0.25rem 0;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-progress {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 0.75rem;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--green-sport), var(--accent));
+      border-radius: 999px;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 5rem 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-tag {
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .feature-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-strong);
+    }
+
+    .feature-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-strong);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      color: var(--accent);
+    }
+
+    .feature-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+      color: var(--text-main);
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Recetas Desbloqueables Preview */
+    .recipe-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .recipe-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .recipe-visual {
+      height: 180px;
+      background: linear-gradient(135deg, #1f2937, #111827);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .recipe-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(10, 14, 20, 0.85);
+      border: 1px solid var(--border-strong);
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--amber-chef);
+    }
+
+    .recipe-body {
+      padding: 1.5rem;
+    }
+
+    .recipe-meta {
+      display: flex;
+      gap: 0.85rem;
+      font-size: 0.8rem;
+      color: var(--text-faint);
+      margin-bottom: 0.5rem;
+    }
+
+    .recipe-body h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .recipe-body p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .coupon-tag {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px dashed rgba(16, 185, 129, 0.35);
+      border-radius: 8px;
+      padding: 0.6rem 0.85rem;
+      font-size: 0.8rem;
+      color: var(--green-sport);
+      font-weight: 600;
+    }
+
+    /* Onboarding & Customizer */
+    .onboarding-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 16px;
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 980px) {
+      .nav-menu {
+        gap: 1rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 840px) {
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: calc(100% + 0.75rem);
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid var(--border-subtle);
+        border-radius: 14px;
+        background: rgba(18, 24, 32, 0.98);
+        box-shadow: 0 24px 40px rgba(0, 0, 0, 0.35);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+      }
+
+      .nav-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.1rem;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 0.75rem 0.35rem;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      .nav-links li:last-child a {
+        border-bottom: 0;
+      }
+
+      .nav-actions {
+        width: 100%;
+      }
+
+      .nav-actions .btn-cta {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .onboarding-box {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 1rem;
+      }
+
+      .brand {
+        font-size: 1.1rem;
+      }
+
+      .hero {
+        padding-top: 4rem;
+      }
+
+      .badge-pill {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.7rem;
+        white-space: normal;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn-cta,
+      .hero-actions .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .preview-header {
+        align-items: flex-start;
+      }
+
+      .preview-user {
+        width: 100%;
+      }
+
+      .sync-bar {
+        padding: 1rem 1.1rem;
+      }
+
+      .sync-devices {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
+      }
+
+      .recipe-meta {
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .coupon-tag {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .filter-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .chip.active {
+      background: rgba(255, 87, 34, 0.15);
+      border-color: var(--accent);
+      color: #ff8a65;
+    }
+
+    /* Hardware / Sync Logos */
+    .sync-bar {
+      margin-top: 3.5rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .sync-bar-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .sync-devices {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      color: var(--text-faint);
+      font-weight: 700;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      background: #080b0f;
+      padding: 3.5rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+    }
+
+    .footer-col h5 {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-col a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.15s ease;
+    }
+
+    .footer-col a:hover {
+      color: var(--text-main);
+    }
+
+    /* Footer Bottom en 3 columnas: Izquierda - Centro - Derecha */
+    .footer-bottom {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-faint);
+    }
+
+    .footer-copyright {
+      text-align: left;
+    }
+
+    .footer-tagline {
+      text-align: right;
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+      text-decoration: none;
+      position: relative;
+      z-index: 10;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: rgba(255, 87, 34, 0.1);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px var(--accent-glow);
+    }
+
+    @media (max-width: 768px) {
+      .footer-bottom {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.25rem;
+      }
+      .footer-copyright,
+      .footer-tagline {
+        text-align: center;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      @page {
+        margin: 1.5cm;
+      }
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .hero-glow, header, .btn-cta, .btn-secondary {
+        display: none !important;
+      }
+      .preview-card, .feature-card, .recipe-card, .onboarding-box {
+        background: #f8fafc !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #000000 !important;
+      }
+      .stat-value, .hero-title span, h3, h4 {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand" aria-label="VeloGourmet inicio">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18.5" cy="17.5" r="3.5"></circle>
+            <circle cx="5.5" cy="17.5" r="3.5"></circle>
+            <circle cx="15" cy="5" r="1"></circle>
+            <path d="M12 17.5V14l-3-3 4-3 2 3h3"></path>
+          </svg>
+        </div>
+        Velo<span>Gourmet</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#desafios">Desafíos & Rutas</a></li>
+          <li><a href="#recetas-video">Video-Recetas</a></li>
+          <li><a href="#onboarding">Personalizar</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="btn-cta">Crear cuenta gratis</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-content">
+        <div class="badge-pill">
+          <span class="badge-dot"></span>
+          Ciclismo de alto rendimiento + Nutrición gourmet
+        </div>
+        
+        <h1 class="hero-title">
+          <span>Pedaleá tus kilómetros.</span><br>
+          <span class="highlight">Desbloqueá alta cocina.</span>
+        </h1>
+
+        <p class="hero-desc">
+          Conectá tu celular, reloj o app deportiva habitual. Cada pedaleo completado desbloquea video-recetas cortas paso a paso, guías adaptadas a tu presupuesto y cupones de descuento en supermercados y marcas aliadas.
+        </p>
+
+        <div class="hero-actions">
+          <button type="button" class="btn-cta">
+            <span>Comenzar desafío gratis</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </button>
+          <a href="#como-funciona" class="btn-secondary">Ver cómo funciona</a>
+        </div>
+
+        <!-- Dashboard Preview Simulated Component -->
+        <div class="preview-card">
+          <div class="preview-header">
+            <div class="preview-user">
+              <div class="user-avatar">VG</div>
+              <div style="text-align: left;">
+                <div style="font-weight: 700; font-size: 0.95rem;">Entrenamiento de Hoy: Salida de Ruta</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Sincronizado vía Celular / App GPS</div>
+              </div>
+            </div>
+            <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(16, 185, 129, 0.12); padding: 0.35rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; color: var(--green-sport);">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              META 35 KM DESBLOQUEADA
+            </div>
+          </div>
+
+          <div class="preview-stats-grid">
+            <div class="stat-box">
+              <div class="stat-label">Distancia recorrida</div>
+              <div class="stat-value">38.4 <span style="font-size: 1rem; color: var(--text-faint);">km</span></div>
+              <div class="stat-progress">
+                <div class="progress-bar-fill" style="width: 100%;"></div>
+              </div>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-label">Gasto energético</div>
+              <div class="stat-value">840 <span style="font-size: 1rem; color: var(--text-faint);">kcal</span></div>
+              <div class="stat-progress">
+                <div class="progress-bar-fill" style="width: 84%; background: var(--accent);"></div>
+              </div>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-label">Recompensa Disponible</div>
+              <div style="font-weight: 700; font-size: 1.05rem; margin-top: 0.4rem; color: var(--amber-chef);">
+                Risotto de Portobellos al Romero
+              </div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">
+                Video on-demand (6 min) + Ficha paso a paso
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sync devices bar -->
+        <div class="sync-bar">
+          <span class="sync-bar-label">Integración directa con tus herramientas y celular:</span>
+          <div class="sync-devices">
+            <span>STRAVA</span>
+            <span>GARMIN</span>
+            <span>SMARTPHONE GPS</span>
+            <span>APPLE HEALTH</span>
+            <span>WAHOO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section id="como-funciona">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">El Circuito VeloGourmet</span>
+          <h2 id="el-combustible-perfecto-para-tu-rendimiento" class="section-title">El combustible perfecto para tu rendimiento</h2>
+          <p class="section-subtitle">Unimos el rigor del entrenamiento ciclista con la recompensa culinaria más gratificante.</p>
+        </div>
+
+        <div class="cards-grid">
+          <div class="feature-card">
+            <div>
+              <div class="feature-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3>1. Pedaleá tus objetivos</h3>
+              <p>Salí a la ruta o usá tu rodillo en casa. Cada tramo acumulado suma a tu desafío semanal, adaptado a tu categoría deportiva (hobby, resistencia o maratón).</p>
+            </div>
+          </div>
+
+          <div id="recetas-video" class="feature-card">
+            <div>
+              <div class="feature-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+              <h3>2. Video-recetas y texto a tu ritmo</h3>
+              <p>Al cruzar la meta desbloqueás videos ágiles de 5 a 10 min y recetas en texto para cocinar cuando puedas, adaptables a los ingredientes que ya tenés en tu cocina.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div>
+              <div class="feature-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                  <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                </svg>
+              </div>
+              <h3>3. Cupones en supermercados y marcas</h3>
+              <p>Elegí entre un abanico de cupones para canjear en cadenas de supermercados o en marcas específicas según tu presupuesto y nivel de constancia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desafíos & Recetas -->
+    <section id="desafios">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Cartelera de Recompensas</span>
+          <h2 id="desafios-activos-de-la-semana" class="section-title">Desafíos activos de la semana</h2>
+          <p class="section-subtitle">Pedaleá la distancia requerida y participá de la sesión en vivo de esta noche.</p>
+        </div>
+
+        <div class="recipe-showcase">
+          <!-- Card 1 -->
+          <div class="recipe-card">
+            <div class="recipe-visual">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+              <div class="recipe-badge">META: 25 KM</div>
+            </div>
+            <div class="recipe-body">
+              <div class="recipe-meta">
+                <span>Video 6 min + Texto</span>
+                <span>Pescetariano / Omega 3</span>
+              </div>
+              <h4>Bowl de Salmón o Atún y Palta al Eneldo</h4>
+              <p>Recuperación muscular rápida con grasas saludables. Adaptable con ingredientes frescos que tengas a mano.</p>
+              <div class="coupon-tag">
+                <span>Cupón 25% OFF</span>
+                <span>Supermercados & Marcas de Aceites</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="recipe-card">
+            <div class="recipe-visual">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 3v18"></path>
+                <path d="M3 12h18"></path>
+              </svg>
+              <div class="recipe-badge">META: 45 KM</div>
+            </div>
+            <div class="recipe-body">
+              <div class="recipe-meta">
+                <span>Video 8 min + Texto</span>
+                <span>100% Vegetariano / Sin TACC</span>
+              </div>
+              <h4>Risotto de Arroz o Quinoa con Hongos y Vegetales</h4>
+              <p>Reposición de energía de absorción gradual sin gluten, económica y con vegetales de estación.</p>
+              <div class="coupon-tag">
+                <span>Cupón 30% OFF</span>
+                <span>Verdulerías & Tiendas Saludables</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="recipe-card">
+            <div class="recipe-visual">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <div class="recipe-badge">META: 70 KM (Fondo)</div>
+            </div>
+            <div class="recipe-body">
+              <div class="recipe-meta">
+                <span>Video 10 min + Texto</span>
+                <span>Presupuesto a Elección</span>
+              </div>
+              <h4>Plato de Carga Proteica (Pollo de Campo / Pato / Legumbres)</h4>
+              <p>Opciones de menú flexible para recarga muscular profunda tras tiradas largas de fin de semana.</p>
+              <div class="coupon-tag">
+                <span>Cupón 20% OFF</span>
+                <span>Cadenas de Supermercado Aliadas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Onboarding Personalizado -->
+    <section id="onboarding">
+      <div class="container">
+        <div class="onboarding-box">
+          <div>
+            <span class="section-tag">Onboarding Inteligente</span>
+            <h2 id="configura-tu-experiencia-a-medida" class="section-title" style="font-size: 2rem;">Configurá tu experiencia a medida</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+              Adaptamos las recetas y los requerimientos de kilometraje según tus necesidades alimentarias, tu destreza en los fuegos y tu nivel de entrenamiento.
+            </p>
+            <button type="button" class="btn-cta">Guardar perfil y activar pruebas</button>
+          </div>
+
+          <div>
+            <div class="filter-group">
+              <label>1. Restricciones Alimentarias</label>
+              <div class="chips-row">
+                <button type="button" class="chip active">Sin TACC / Celíaco</button>
+                <button type="button" class="chip active">Vegetariano</button>
+                <button type="button" class="chip">Pescetariano</button>
+                <button type="button" class="chip">Vegano</button>
+                <button type="button" class="chip">Sin Lactosa</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <label>2. Presupuesto & Despensa</label>
+              <div class="chips-row">
+                <button type="button" class="chip active">Económico / Ingredientes cotidianos</button>
+                <button type="button" class="chip">Equilibrado</button>
+                <button type="button" class="chip">Gourmet / Ocasión especial</button>
+                <button type="button" class="chip active" style="border-color: var(--amber-chef); color: var(--amber-chef);">✨ Modo "Cocinar con lo que tengo en casa"</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <label>3. Formato de Receta</label>
+              <div class="chips-row">
+                <button type="button" class="chip active">Video corto (5-10 min) + Texto</button>
+                <button type="button" class="chip">Solo ficha de texto descargable</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <label>4. Objetivo Ciclista</label>
+              <div class="chips-row">
+                <button type="button" class="chip">Urbano / Recreativo (10-25 km/sem)</button>
+                <button type="button" class="chip active">Entrenamiento Medio (50-100 km)</button>
+                <button type="button" class="chip">Fondo / Rendimiento (+150 km)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand" style="margin-bottom: 0.85rem;">
+            <div class="brand-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18.5" cy="17.5" r="3.5"></circle>
+                <circle cx="5.5" cy="17.5" r="3.5"></circle>
+                <path d="M12 17.5V14l-3-3 4-3 2 3h3"></path>
+              </svg>
+            </div>
+            Velo<span>Gourmet</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.85rem; max-width: 320px; line-height: 1.5;">
+            La primera plataforma que convierte el esfuerzo del ciclismo en recompensas gastronómicas de primer nivel.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Plataforma</h5>
+          <ul>
+            <li><a href="#como-funciona">Sincronización Celular / GPS</a></li>
+            <li><a href="#desafios">Desafíos Semanales</a></li>
+            <li><a href="#recetas-video">Video-Recetas On-Demand</a></li>
+            <li><a href="#onboarding">Perfil Nutricional & Presupuesto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Comunidad & Marcas</h5>
+          <ul>
+            <li><a href="#onboarding">Marcas Asociadas</a></li>
+            <li><a href="#onboarding">Programa de Patrocinios</a></li>
+            <li><a href="#onboarding">Términos de Privacidad y GPS</a></li>
+            <li><a href="#onboarding">Soporte y Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 VeloGourmet Inc. Todos los derechos reservados.
+        </div>
+
+        <!-- Redes GaelCanoDev centradas -->
+        <div class="social-links">
+          <a href="https://www.instagram.com/GaelCano.Dev" target="_blank" rel="noopener noreferrer" aria-label="Instagram de GaelCanoDev">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://github.com/GaelCanoDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub de GaelCanoDev">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/GaelCanoDev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de GaelCanoDev">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer-tagline">
+          Diseñado para ciclistas con buen paladar.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+
+      if (!navToggle || !navMenu) return;
+
+      navToggle.addEventListener('click', function () {
+        const isOpen = navMenu.classList.toggle('is-open');
+        navToggle.classList.toggle('is-active', isOpen);
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      navMenu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (window.innerWidth <= 840) {
+            navMenu.classList.remove('is-open');
+            navToggle.classList.remove('is-active');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 840) {
+          navMenu.classList.remove('is-open');
+          navToggle.classList.remove('is-active');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
